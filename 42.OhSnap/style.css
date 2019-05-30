@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+*{
+    box-sizing: border-box;
+    background: rgb(235, 238, 192);
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+}
+.rb{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 500px;
+  margin-top: -200px;
+  margin-left: -200px;
+	overflow: hidden;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    margin-top: 30px;
+    background: #fff;
+}
+
+.modal {
+  position: absolute;
+  width: 280px;
+  height: 250px;
+  top: 95px;
+  left: 60px;
+  background: #fff;
+  border-radius: 3px;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.4);
+	text-align: center;
+	overflow: hidden;
+	animation: show-modal .7s ease-in-out;
+}
+.title {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 5px 0 5px 0;
+    background: #fff;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    margin: 0;
+    padding: 0 15px;
+    background: #fff;   
+}
+
+.button {
+    position: absolute;
+    height: 40px;
+    width:100%;
+    border: 0px;
+    bottom: 0;
+    margin:0;
+    left: 0;
+    right: 0;
+    background: #F65656;
+    color: #fff;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    }
+.button:hover{
+    background: #EC3434;
+}
+button:active {
+    border-style: outset;
+  }
+
+.hide {
+    animation: hide-modal .6s ease-in-out both;
+}
+
+.reload{
+    height:50px;
+    width: 200px;
+    border: 0px;
+    bottom: 0;
+    margin:0;
+    left: 50%;
+    right: 0;
+    background: rgb(56, 56, 56);
+    color: white;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.reload:hover{
+    background: rgb(29, 29, 29);
+}
+.reload:active {
+    border-style: outset;
+    background: rgb(0, 0, 0);
+  }
+
+.github{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    background: rgb(235, 238, 192);
+}  
+
+.leftArrow{
+    position: absolute;
+    background: rgb(235, 238, 192);
+    left: 3%;
+    top: 50%;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    animation: arrows 4s ease-in infinite;
+    opacity: 0.55;
+}
+.leftArrow:hover{
+    opacity: 1;
+}
+
+.rightArrow{
+    position: absolute;
+    background: rgb(235, 238, 192);
+    right: 3%;
+    top: 50%;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    animation: arrows 4s ease-in infinite;
+    opacity: 0.55;
+}
+.rightArrow:hover{
+    opacity: 1;
+}
+
+@keyframes arrows {
+    0% {
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.85);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(0.85);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes show-modal {
+	0% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(.95);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes hide-modal {
+	0% {
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@media screen and (max-height: 750px) {
+    body{
+        overflow: hidden;
+    }
+ .reload{
+     height: 40px;
+     width: 70px;
+ }
+
+}
